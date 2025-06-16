@@ -18,10 +18,17 @@
 ```python
 # 1. Instalación (ejecutar estas celdas primero)
 !pip install openai-whisper
-!pip insatll yt-dlp
+!pip install yt-dlp
 
 # 2. Pegar URL de YouTube
 youtube_url = "https://youtu.be/ejemplo"  # ← Cambiar aquí
 
 # 3. Transcribir (automáticamente usa GPU)
 model = whisper.load_model("medium")  # cambiar entre base, medium, small etc.
+
+| Modelo  | Velocidad (GPU) | Precisión | Uso Recomendado          |
+|---------|-----------------|-----------|--------------------------|
+| tiny    | Muy rápida      | 58%       | Pruebas rápidas          |
+| base    | Rápida          | 73%       | Uso general              |
+| small   | Media           | 82%       | Equilibrado              |
+| medium  | Moderada        | 91%       | Calidad profesional      |
